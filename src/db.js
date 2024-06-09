@@ -2,6 +2,13 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const { DB_DEPLOY } = process.env;
 
+if (!DB_DEPLOY) {
+  console.error("La variable de entorno DB_DEPLOY no está definida");
+  process.exit(1);
+} else {
+  console.log("DB_DEPLOY:", DB_DEPLOY);  // Esto es para verificar que se está cargando correctamente
+}
+
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
   native: false,
