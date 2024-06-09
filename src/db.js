@@ -7,6 +7,7 @@ const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
   native: false,
   alter: false,
+  dialectModule: require('pg')
 });
 
 const fs = require('fs');
