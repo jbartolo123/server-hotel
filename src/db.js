@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
-const { DB_DEPLOY } = process.env;
+// const { DB_DEPLOY } = process.env;
+const DB_DEPLOY="postgresql://postgres:TdosLIwswwnpCfOhhapJHBJhowLASduL@roundhouse.proxy.rlwy.net:49908/railway"
 
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
