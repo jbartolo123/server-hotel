@@ -1,13 +1,6 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
-// const { DB_DEPLOY } = process.env || "DB_DEPLOY=postgresql://postgres:TdosLIwswwnpCfOhhapJHBJhowLASduL@roundhouse.proxy.rlwy.net:49908/railway";
-const DB_DEPLOY = "postgresql://postgres:TdosLIwswwnpCfOhhapJHBJhowLASduL@roundhouse.proxy.rlwy.net:49908/railway"
-if (!DB_DEPLOY) {
-  console.error("La variable de entorno DB_DEPLOY no está definida");
-  process.exit(1);
-} else {
-  console.log("DB_DEPLOY:", DB_DEPLOY); 
-}
+const { DB_DEPLOY } = process.env;
 
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
