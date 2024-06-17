@@ -2,7 +2,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 // const { DB_DEPLOY } = process.env;
 const DB_DEPLOY="postgresql://postgres:TdosLIwswwnpCfOhhapJHBJhowLASduL@roundhouse.proxy.rlwy.net:49908/railway"
-
+// const DB_DEPLOY= "postgres://postgres:jbh@localhost:5432/hotel"
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
   native: false,
@@ -36,7 +36,12 @@ let capsEntries = entries.map((entry) => [
 
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { User } = sequelize.models;
+const { User, Room } = sequelize.models;
+
+Room['dataExist'] = async () => {
+  const amountData = await model.count()
+  return amountData > 0
+}
 
 module.exports = {
   ...sequelize.models,

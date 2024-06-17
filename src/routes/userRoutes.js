@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { getUsers, createUser } = require('../controllers/userControllers');
-
+const { User } = require("../db")
 const userRoutes = Router();
 
 userRoutes.get("/", async (req,res) => {
@@ -20,6 +20,16 @@ userRoutes.post("/", async (req,res) => {
         res.status(200).json(newUser)
     } catch (error) {
         res.status(404).json({error: error.message})    
+    }
+})
+
+userRoutes.delete("/:id",async (req,res) => {
+    try {
+        const { id } = req.params
+        const deleteUser = await User.destroy({where: {id: id}})
+        res.status(200).json(deleteUser)
+    } catch (error) {
+        res.status(404).json({error: error.message})
     }
 })
 

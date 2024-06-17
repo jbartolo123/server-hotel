@@ -1,0 +1,129 @@
+[
+  {
+    "roomNumber": "101",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "102",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  
+  },
+  {
+    "roomNumber": "103",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "104",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "105",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "201",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "202",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "203",
+    "roomType": "MATRIMONIAL",
+    "price": "120",
+    "service": ["WIFI","TV","JACUZZI"]
+  },
+  {
+    "roomNumber": "204",
+    "roomType": "MATRIMONIAL",
+    "price": "120",
+    "service": ["WIFI","TV","JACUZZI"]
+  },
+  {
+    "roomNumber": "301",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "302",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "303",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "304",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "401",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "402",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "403",
+    "roomType": "MATRIMONIAL",
+    "price": "120",
+    "service": ["WIFI","TV","JACUZZI"]
+  },
+  {
+    "roomNumber": "404",
+    "roomType": "MATRIMONIAL",
+    "price": "120",
+    "service": ["WIFI","TV","JACUZZI"]
+  },
+  {
+    "roomNumber": "501",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "502",
+    "roomType": "DOBLE",
+    "price": "120",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "503",
+    "roomType": "INDIVIDUAL",
+    "price": "80",
+    "service": ["WIFI","TV"]
+  },
+  {
+    "roomNumber": "504",
+    "roomType": "MATRIMONIAL",
+    "price": "120",
+    "service": ["WIFI","TV","JACUZZI"]
+  }
+]
