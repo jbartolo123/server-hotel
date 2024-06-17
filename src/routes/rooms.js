@@ -21,4 +21,15 @@ roomRoutes.post("/", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
+
+roomRoutes.post("/create", async (req, res) => {
+  try {
+    const data = req.body;
+    Room.create(data);
+    res.status(200).json({ hecho: true });
+  } catch (error) {
+    res.status(400).json({error : error.message})
+  }
+});
+
 module.exports = roomRoutes;
