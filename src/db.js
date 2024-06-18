@@ -36,12 +36,10 @@ let capsEntries = entries.map((entry) => [
 
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { User, Room } = sequelize.models;
+const { User, Room, Reservation } = sequelize.models;
 
-Room['dataExist'] = async () => {
-  const amountData = await model.count()
-  return amountData > 0
-}
+Room.hasMany(Reservation, { foreignKey: 'roomId' })
+Reservation.belongsTo(Room, { foreignKey: 'roomId' })
 
 module.exports = {
   ...sequelize.models,
