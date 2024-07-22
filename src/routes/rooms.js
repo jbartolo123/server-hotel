@@ -28,7 +28,17 @@ roomRoutes.post("/create", async (req, res) => {
     Room.create(data);
     res.status(200).json({ hecho: true });
   } catch (error) {
-    res.status(400).json({error : error.message})
+    res.status(400).json({ error: error.message });
+  }
+});
+
+roomRoutes.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteRoom = await Room.destroy({ where: { id: id } });
+    res.status(200).json(deleteRoom);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
   }
 });
 
