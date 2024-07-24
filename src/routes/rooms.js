@@ -38,8 +38,7 @@ roomRoutes.put("/:id", async (req, res) => {
     const { image } = req.body
     const room = Room.findByPk(id)
     if (room) {
-      room.image = image;
-      await room.save();
+      await room.update({image: image})
       res.status(200).json({hecho:true});
     }
     console.log("no se encontro");
