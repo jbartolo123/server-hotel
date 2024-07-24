@@ -30,6 +30,10 @@ module.exports = (sequelize) => {
         allowNull: false,
         defaultValue: "DISPONIBLE",
       },
+      image: {
+        type: DataTypes.STRING,
+        defaultValue: "https://static.abc.es/Media/201504/27/hotel12--644x362.jpg"
+      }
     },
     { freezeTableName: true, timestamps: false }
   );
