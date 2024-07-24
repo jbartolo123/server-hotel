@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { getRooms } = require("../controllers/room");
 const { Room } = require("../db");
+const { where } = require("sequelize");
 const roomRoutes = Router();
 
 roomRoutes.get("/", async (req, res) => {
@@ -36,12 +37,16 @@ roomRoutes.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const { image } = req.body
-    const room = Room.findByPk(id)
-    if (room) {
-      await room.update({image: image})
-      res.status(200).json({hecho:true});
-    }
-    console.log("no se encontro");
+    await Room.update(
+      {image:image},
+      {
+        where:{
+          id
+        }
+      }
+    )
+    res.status(200).json({ hecho:true });
+ 
   } catch (error) {
     res.status(404).json({ error: error.message });
   }
